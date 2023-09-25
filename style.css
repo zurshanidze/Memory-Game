@@ -1,0 +1,401 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-width: fit-content;
+    min-height: fit-content;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background: rgba(12, 36, 146, 0.8); */
+    background: url("https://www.rpnation.com/gallery/bg.25288/full");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.dark-screen{
+    background: rgba(76, 173, 76, 0.8);
+    background: url("https://media.istockphoto.com/photos/dynamic-retro-background-picture-id1200128505?k=20&m=1200128505&s=612x612&w=0&h=MMMd1V-Beq6478H4-O5aGJ6pLkMcWrdTJi34jPbDA68=");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.dark-screen-button {
+    position: absolute;
+    top:4px;
+    left:2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 50px;
+    min-height: 30px;
+    margin: 2px;
+    padding: 10px 20px;
+    min-width: fit-content;
+    
+    border-radius: 27px;
+    cursor: pointer;
+    z-index: 1;
+    font-size: 20px;
+    background: rgb(27, 9, 187);
+        border: 2px solid rgb(178, 190, 184);
+        color: rgb(235, 235, 17);
+}
+
+.dark-btn{
+    background: rgb(52, 128, 235);
+    color: white;
+    border:2px solid rgb(2, 2, 2)
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: fit-content;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.header-line-1, .header-line-2{
+    margin: 20px auto 0px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+.header-line-2{
+    height: 50px;
+    min-height: fit-content;
+}
+
+.reload {
+    margin: 10px;
+    margin-top: 40px;
+    padding: 10px;
+    min-width: fit-content;
+    background: rgb(52, 128, 235);
+    color: white;
+    border-radius: 7px;
+    border: none;
+    cursor: pointer;
+}
+
+.time-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    min-width: fit-content;
+    background: rgb(52, 128, 235);
+    color: white;
+    border-radius: 7px;
+    border: none;
+    width: 80px;
+    height: auto;
+    min-height: fit-content;
+}
+
+.time-count {
+    min-width: fit-content;
+    width: 80px;
+    text-align: center;
+}
+
+.score-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: fit-content;
+    width: 150px;
+    min-height: fit-content;
+    height: 70px;
+    margin: 10px;
+    padding: 0 20px;
+    background: rgb(112, 1, 112);
+    color: white;
+    border-radius: 10px;
+}
+
+.textH2 {
+    margin: 10px;
+    min-width: fit-content;
+    width: 220;
+    opacity: 0;
+}
+
+.blockedScreen {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100vh;
+    min-height: 660px;
+    z-index: 1;
+    margin: 0px;
+    align-items: flex-start;
+    border-radius: 0px;
+}
+
+.gameOver-wrapper {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: auto;
+    min-width: 200px;
+}
+
+.gameOver-text {
+    width: auto;
+    min-width: 100px;
+    height: auto;
+    min-height: 50px;
+    margin:0 10px;
+    padding: 10px 20px;
+    background: rgba(245, 191, 255, 0.4);
+    /*background: rgba(255, 255, 255);*/
+    /*color: rgb(44, 62, 163);*/
+    color: rgba(255, 255, 255);
+    border-radius: 7px;
+    text-align: center;
+}
+
+.tryAgain {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    min-width: 100px;
+    height: auto;
+    min-height: 100px;
+    margin: 10px;
+    padding: 10px 20px;
+    min-width: fit-content;
+    width: 177px;
+    background: rgb(52, 128, 235);
+    color: white;
+    border-radius: 27px;
+    border: none;
+    cursor: pointer;
+}
+
+
+.visible {
+    animation: visible 1000ms forwards;
+}
+
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-width: 260px;
+    width: 300px;
+    min-height: fit-content;
+    height: 225px;
+    margin: 0 auto 20px auto;
+}
+
+.cardContainer {
+    min-width: auto;
+    width: 75px;
+    min-height: auto;
+    height: 75px;
+}
+
+.removed {
+    animation: RemovedMatchedCards 1s forwards;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border: 2px solid pink;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease;
+    cursor: pointer;
+}
+
+.clicked {
+    transform: rotateY(180deg);
+    border: 7px solid blue;
+}
+
+.matchedCards {
+    animation: matchedCards 500ms forwards;
+}
+
+.card .cardFront {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* background: yellow; */
+    background:transparent;
+    background-size: cover;
+    color: blue;
+    backface-visibility: hidden;
+    backdrop-filter:blur(5px);
+}
+
+.card .cardBack {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform: rotateY(180deg);
+}
+
+.cardBack img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+@media screen and (min-width:500px) and (max-width:699px) {
+    .main-container {
+        display: flex;
+        flex-wrap: wrap;
+        min-width:400px;
+        width: 400px;
+        min-height: fit-content;
+        height: 300px;
+        margin-bottom: 20px;
+    }
+
+    .cardContainer {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+
+@media screen and (min-width:700px) {
+    body{
+        /* background: rgba(12, 36, 146, 0.8); */
+        /* background: url("https: //www.blendernation.com/wp-content/uploads/2016/07/Abstract.png"); */
+        /* background: url("https: //w0.peakpx.com/wallpaper/998/74/HD-wallpaper-cube-abstract-black.jpg"); */
+        /* background: url("https://img.freepik.com/premium-vector/abstract-technology-background-science-connecting-technology_42705-96.jpg"); */
+        background: url("https://www.rpnation.com/gallery/bg.25288/full");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .dark-screen {
+        /* background: url("https://i.pinimg.com/originals/75/0d/20/750d20a2511eafb666faa8689a1ead2e.jpg"); */
+        /* background: url("https://i.pinimg.com/736x/dd/27/71/dd2771625dd4a2695c80ecd60ba141ba.jpg"); */
+        /* background: url("https://media.istockphoto.com/vectors/composition-of-blue-3d-cubes-vector-id477959460?k=20&m=477959460&s=612x612&w=0&h=e1syWbNO5Pm-rGrxYeDQhMHTlxokxmGUIPSSBlZ3jZ8="); */
+        /* background: url("https://thumbs.dreamstime.com/b/abstract-dna-molecules-structure-science-technology-background-illustration-vector-119136443.jpg"); */
+        /* background: url("https://i.pinimg.com/736x/19/90/9e/19909ed8738a402b7b7d619987644761.jpg"); */
+        /* background: url("https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YWJzdHJhY3R8ZW58MHx8MHx8&w=1000&q=80");
+        background: url("https://img.besthqwallpapers.com/Uploads/19-8-2019/101798/colorful-abstract-background-geometric-backgrounds-retro-backgrounds-creative-color-abstraction.jpg");
+        background: url("https://cd.blokt.com/wp-content/uploads/2019/01/digital-blockchain-interface-with-cyber-protection-button-concept-at-abstract-technology-background.-3D-Rendering-Illustration.jpg"); */
+        background: url("https://media.istockphoto.com/photos/dynamic-retro-background-picture-id1200128505?k=20&m=1200128505&s=612x612&w=0&h=MMMd1V-Beq6478H4-O5aGJ6pLkMcWrdTJi34jPbDA68=");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        /* background: green; */
+        /* background: url("https://img.freepik.com/free-vector/space-game-background-neon-night-alien-landscape_107791-1624.jpg?w=2000"); */
+    }
+    .dark-screen-button{
+        top: 20px;
+        right: 20px;
+    }
+    .main-container {
+        display: flex;
+        flex-wrap: wrap;
+        min-width: 600px;
+        width: 500px;
+        min-height: 450px;
+        height: 300px;
+        margin-bottom: 20px;
+    }
+
+    .cardContainer {
+        width: 150px;
+        height: 150px;
+    }
+    .score-wrapper {
+        background: rgb(87, 6, 87);
+    }
+}
+
+
+@media screen and (max-height:550px) and (max-width: 900px){
+    .header-line-1,
+    .header-line-2 {
+        margin: 1px;
+    }
+    .blockedScreen {
+        top: -100px
+    }
+}
+
+
+
+
+
+
+
+
+@keyframes matchedCards {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes visible {
+    0% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 0;
+    }
+}
+
+@keyframes RemovedMatchedCards {
+    0% {
+        opacity: 1;
+        background: purple;
+    }
+
+    100% {
+        opacity: 0;
+        background: purple;
+        visibility: hidden;
+    }
+}

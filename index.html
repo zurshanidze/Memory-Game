@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Memory Game</title>
+  </head>
+  <body>
+    <div class="header-container">
+      <div class="header-line-1">
+        <button class="reload" id="reload">Reload</button>
+        <div class="time-wrapper">
+          <h2>Time</h2>
+          <h3 class="time-count">30</h3>
+        </div>
+
+        <div class="score-wrapper">
+          <h2>Score</h2>
+          <h3 class="scoreH3">0</h3>
+        </div>
+      </div>
+
+      <div class="header-line-2">
+        <h2 class="textH2">You Found a Match</h2>
+      </div>
+    </div>
+
+    <div class="main-container"></div>
+
+    <div class="gameOver-wrapper">
+      <h1 class="gameOver-text"></h1>
+      <h1 class="tryAgain" id="tryAgain">Try Again</h1>
+    </div>
+
+    <button class="dark-screen-button">Light</button>
+
+    <script src="./scripts.js"></script>
+  </body>
+</html>
